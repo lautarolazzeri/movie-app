@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas/widgets/widgets.dart';
+
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key? key}) : super(key: key);
@@ -19,6 +21,10 @@ class DetailsScreen extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate([
               const _PosterAndTitle(),
+              const _Overview(),
+              const _Overview(),
+              const _Overview(),
+              CastingCards(),
               // Text(movie)
             ]),
           )
@@ -44,6 +50,7 @@ class _CustomAppBar extends StatelessWidget {
         title: Container(
           width: double.infinity,
           alignment: Alignment.bottomCenter,
+          padding: const EdgeInsets.only(bottom: 15),
           color: Colors.black45,
           child: const Text(
             'movie.title',
@@ -64,6 +71,7 @@ class _CustomAppBar extends StatelessWidget {
 
 
 class _PosterAndTitle extends StatelessWidget {
+
   const _PosterAndTitle({Key? key}) : super(key: key);
 
   @override
@@ -109,6 +117,21 @@ class _PosterAndTitle extends StatelessWidget {
           )
         ]
       ),
+    );
+  }
+}
+
+
+class _Overview extends StatelessWidget {
+  const _Overview({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      child: Text('Lorem dolore aliquip voluptate mollit minim esse excepteur ipsum irure est voluptate officia. Occaecat Lorem veniam est exercitation quis veniam anim commodo ut reprehenderit quis esse. Ipsum exercitation ex tempor aute veniam anim pariatur. Excepteur aliquip exercitation ea ea aliquip ipsum exercitation non irure. Deserunt fugiat velit laborum veniam et ut fugiat sunt cupidatat. Qui non enim ad ipsum laborum exercitation quis est commodo do anim irure proident. Non nisi quis magna minim sint voluptate sit id duis.',
+      textAlign: TextAlign.justify,
+      style: Theme.of(context).textTheme.subtitle1,),
     );
   }
 }
