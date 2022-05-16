@@ -23,4 +23,10 @@ class PopularResponse {
         totalPages: json["total_pages"],
         totalResults: json["total_results"],
     );
+
+
+
+
+
+
 }
