@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CastingCards extends StatelessWidget {
-  const CastingCards({Key? key}) : super(key: key);
+  final int movieId;
+
+  const CastingCards(this.movieId);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +20,8 @@ class CastingCards extends StatelessWidget {
   }
 }
 
-
 class _CastCard extends StatelessWidget {
-  const _CastCard({ Key? key }) : super(key: key);
+  const _CastCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,9 @@ class _CastCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
           const Text(
             'actor.name asdas asfasf',
             maxLines: 2,
@@ -49,6 +52,6 @@ class _CastCard extends StatelessWidget {
           )
         ],
       ),
-   );
+    );
   }
 }
